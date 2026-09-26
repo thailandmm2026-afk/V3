@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ shop_name }} - Control Panel</title>
+    <style>
+        body { background: #0b1120; color: #f1f5f9; font-family: system-ui, sans-serif; margin: 0; padding: 20px; }
+        .nav { display: flex; justify-content: space-between; align-items: center; background: #1e293b; padding: 15px 25px; border-radius: 10px; }
+        .btn-logout { background: #ef4444; color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: bold; font-size: 14px; }
+        .container { margin-top: 25px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .box { background: #1e293b; padding: 20px; border-radius: 10px; border-left: 4px solid #38bdf8; }
+        .box h3 { margin-top: 0; color: #94a3b8; font-size: 14px; }
+        .box p { font-size: 18px; font-weight: bold; margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>{{ shop_name }} Control Panel</h2>
+        <a href="/logout" class="btn-logout">Logout</a>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h3>Server Status</h3>
+            <p style="color: #4ade80;">Active (Render 24/7)</p>
+        </div>
+        <div class="box">
+            <h3>Host Domain Link</h3>
+            <p style="font-size: 14px; word-break: break-all; color: #38bdf8;">{{ base_url }}</p>
+        </div>
+        <div class="box">
+            <h3>Currency</h3>
+            <p>{{ currency }}</p>
+        </div>
+    </div>
+</body>
+</html>
